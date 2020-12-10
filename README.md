@@ -1,4 +1,4 @@
-# numeros-primos
+# soma-numeros-primos
 
   Este repositório contém duas implementações de um programa que calcula os _n_ primeiros números primos e verifica quais desses números resultam em uma soma predefinida e também servirá como fonte de documentação dos códigos descritos no artigo desenvolvido referente a nota da M3 da disciplina de Arquitetura e Organização de Computadores.
 
