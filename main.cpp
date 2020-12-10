@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#include <time.h>
+
 #define QTDE_PRIMOS 1000
 
 int is_primo(int suposto_primo) {
@@ -24,6 +26,10 @@ int encontrar_proximo_primo(int n) { // n == ultimo primo encontrado
 }
 
 int main() {
+    clock_t t;
+
+    t = clock();
+
     int soma = 216;
 
     int primos[QTDE_PRIMOS];
@@ -39,12 +45,18 @@ int main() {
             if(primos[i] + primos[j] > soma) break;
 
             if(primos[i] + primos[j] == soma) {
-                cout << primos[i] << " + " << primos[j] << " = " << soma << endl;
+                printf("%d + %d = %d\n", primos[i], primos[j], soma);
             }
         }
 
         if(primos[i] > soma) break;
     };
+
+    t = clock() - t;
+    
+    double tempo_execucao = ((double)t)/(CLOCKS_PER_SEC/1000);
+
+    printf("Tempo de execução -> %f ms\n", tempo_execucao);
 
     return 0;
 }
